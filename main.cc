@@ -4,17 +4,18 @@
 
 int main(int argc, const char* const* argv)
 {
+    std::string regex;
     if(argc != 2)
     {
-        std::cout
-        << "regex-opt " VERSION " - Copyright (C) 1992,2006 Bisqwit (http://iki.fi/bisqwit/)\n"
-           "This program is distributed under the terms of the General Public License.\n"
-           "\n"
-           "Usage: regex-opt <regexp>\n";;
-        return 0;
+        std::cout << "Please insert your regex> ";
+        std::cin >> regex;
     }
-    try {
+    else
+    {
         std::string regex = argv[1];
+    }
+
+    try {
 
         unsigned pos=0;
 
