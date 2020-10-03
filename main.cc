@@ -5,6 +5,15 @@
 int main(int argc, const char* const* argv)
 {
     std::string regex;
+    if(argc == 2 && std::string(argv[1]) == std::string("-v"))
+    {
+        std::cout
+        << "regex-opt " VERSION " - Copyright (C) 1992,2006 Bisqwit (http://iki.fi/bisqwit/)\n"
+           "This program is distributed under the terms of the General Public License.\n"
+           "\n"
+           "Usage: regex-opt <regexp>\n";;
+        return 0;
+    }
     if(argc != 2)
     {
         std::cout << "Please insert your regex> ";
